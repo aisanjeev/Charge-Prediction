@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insurance Charge Prediction</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, #4e54c8, #8f94fb), url('your-background-image.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            color: #fff;
+        }
+        
+        h1 {
+            text-transform: capitalize;
+            font-size: 36px;
+        }
+        
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            margin-top: 3%;
+            color: #333;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Include external CSS file -->
+</head>
+<body>
+
+    <h1>Insurance Charge Predictor</h1>
+
+    <form method="post" action="/predict">
+        <label>AGE</label><br>
+        <input type="number" name="Age" required><br><br>
+
+        <label>Gender</label><br>
+        <input type="number" name="Gender" required><br><br>
+
+        <label>BMI</label><br>
+        <input type="number" name="Bmi" required><br><br>
+
+        <label>No. of Children</label><br>
+        <input type="number" name="children" required><br><br>
+
+        <label>Smoker</label><br>
+        <input type="number" name="smoker" required><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+    </form>
+
+    <h2>{{ fin_result }}</h2>
+
+</body>
+</html>
